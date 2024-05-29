@@ -13,4 +13,10 @@ public class MainClassTest extends MainClass {
         int number = getClassNumber();
         Assert.assertTrue("The returned number isn't greater than 45",number > 45);
     }
+
+    @Test
+    public void testGetClassString() {
+        String phrase = getClassString();
+        Assert.assertTrue("The given phrase doesn't contain the word 'hello'", phrase.contains("hello") || phrase.contains("Hello"));
+    }
 }
